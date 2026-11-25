@@ -1,0 +1,210 @@
+:root {
+    --background: #f7f8ff;
+    --surface: #ffffff;
+    --text: #29304b;
+    --muted: #687296;
+    --accent: #6574ba;
+    --accent-hover: #4e5d9f;
+    --danger: #b84e64;
+    --danger-hover: #94374d;
+    --border: #dfe3f5;
+    --success: #e7f1ff;
+    --error: #f8eafa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 20px;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 28px 0 20px;
+    font-size: 1.8rem;
+}
+
+a {
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    padding: 18px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+nav form {
+    margin: 0 0 0 auto;
+}
+
+.card {
+    padding: 24px;
+    overflow-x: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 6px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    max-width: 480px;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #b9c3f2;
+    outline-offset: 1px;
+}
+
+button,
+.button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    text-decoration: none;
+}
+
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background: #eef0ff;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+td form {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Delete buttons in the list tables */
+td form button {
+    background: var(--danger);
+}
+
+td form button:hover {
+    background: var(--danger-hover);
+}
+
+img {
+    max-width: 80px;
+    max-height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.success,
+.error {
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.success {
+    background: var(--success);
+}
+
+.error {
+    background: var(--error);
+    color: #842b5b;
+}
+
+/* Add, edit, and Record Sale forms */
+.form-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.form-layout > label {
+    margin: 16px 0 0;
+}
+
+.form-layout > input,
+.form-layout > select {
+    width: 100%;
+    max-width: none;
+}
+
+.form-layout > p,
+.form-layout > img {
+    grid-column: 1;
+    margin: 12px 0 0;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 16px;
+    }
+
+    nav form {
+        margin-left: 0;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
